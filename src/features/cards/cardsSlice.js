@@ -28,6 +28,11 @@ export const cardsSlice = createSlice({
     updateCard: (state, action) => {
       state.byId[action.payload._id] = action.payload;
     },
+    deleteCard: (state, action) => {
+      delete state.byId[action.payload];
+      const index = state.byIds.findIndex((item) => item === action.payload);
+      state.byIds.splice(index, 1);
+    },
   },
 });
 
@@ -36,6 +41,7 @@ export const {
   setIsLoading,
   setFilter,
   updateCard,
+  deleteCard,
 } = cardsSlice.actions;
 
 export const fetchAllCards = () => async (dispatch) => {
@@ -52,8 +58,8 @@ export const fetchAllCards = () => async (dispatch) => {
 
 export const selectCards = (state) =>
   denormalizeCards(state.cards.byIds, state.cards.byId);
-
 export const selectFilter = (state) => state.cards.filter;
+export const selectAreCardsLoading = (state) => state.cards.isLoading;
 export const selectCardById = (state, id) => state.cards.byId[id];
 
 export default cardsSlice.reducer;

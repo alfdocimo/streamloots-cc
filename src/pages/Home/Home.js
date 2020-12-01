@@ -6,6 +6,7 @@ import Input from "../../components/Input";
 import Navbar from "../../components/Navbar";
 import {
   fetchAllCards,
+  selectAreCardsLoading,
   selectCards,
   selectFilter,
   setFilter,
@@ -13,6 +14,7 @@ import {
 
 export default function Home() {
   const allCards = useSelector(selectCards);
+  const isLoading = useSelector(selectAreCardsLoading);
   const filter = useSelector(selectFilter);
 
   const dispatch = useDispatch();
@@ -28,7 +30,9 @@ export default function Home() {
   return (
     <div>
       <Navbar>
-        <h3 style={{ color: "white" }}>Totally not Streamloots</h3>
+        <h3 style={{ color: "white" }}>
+          {(isLoading && "Loading...") || "Totally not Streamloots"}
+        </h3>
 
         <Input
           onChange={handleSetFilter}
