@@ -1,0 +1,71 @@
+.CardList {
+  width: 100vw;
+  height: 90vh;
+}
+
+.ItemsList {
+  background-color: #121a24;
+}
+
+.ItemsList:before {
+  background-image: url(https://static.streamloots.com/99d63dc9-60b1-4376-aea9-08592f04781d/brand/streamloots-secondary.svg);
+  content: " ";
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  opacity: 0.05;
+  background-repeat: repeat;
+}
+
+.element {
+  display: flex;
+  align-items: center;
+  justify-content: left;
+  padding-left: 16px;
+  align-items: center;
+  /* justify-content: space-evenly; */
+  justify-content: space-evenly;
+  align-content: end;
+  justify-items: left;
+}
+
+.element:hover {
+  display: flex;
+  align-items: center;
+  justify-content: left;
+  padding-left: 16px;
+  opacity: 1;
+  align-items: center;
+  /* justify-content: space-evenly; */
+  justify-content: space-evenly;
+  align-content: end;
+  justify-items: left;
+}
+
+.ItemList__Element--even {
+  composes: element;
+  background-color: #3c516a;
+}
+
+.ItemList__Element--even:hover,
+.ItemList__Element--uneven:hover {
+  background-color: #2f3f53;
+  transition: all 1s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+.ItemList__Element--uneven {
+  composes: element;
+  background-color: #435975;
+}
+
+.ItemList__Element__Link {
+  color: #ffffff;
+}
+
+.ItemList__Element__Link:hover {
+  color: #ffffff;
+}

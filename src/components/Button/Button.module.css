@@ -1,0 +1,15 @@
+.Button {
+  background-color: #374556;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  color: white;
+  box-shadow: -1px 2px 4px 0 rgb(33 33 33 / 72%);
+  cursor: pointer;
+  opacity: 0.7;
+  transition: all 1s cubic-bezier(0.075, 0.82, 0.165, 1);
+  min-height: 30px;
+}
+
+.Button:hover {
+  opacity: 1;
+}
