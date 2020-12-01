@@ -39,7 +39,7 @@ export default function Home() {
           value={filter}
           placeholder={"Use me to search cards! 🔍"}
         />
-        <Button onClick={handleFetchAllCards}>Fetch cards</Button>
+        <Button tracking-id={"fetch-cards"} onClick={handleFetchAllCards}>Fetch cards</Button>
       </Navbar>
       <CardList cards={allCards} />
     </div>

@@ -18,7 +18,7 @@ export default function CardDetails() {
         <h3 style={{ color: "white" }}>Totally not Streamloots</h3>
 
         <Link to={"/"}>
-          <Button>Back 👈</Button>
+          <Button tracking-id={"back-card-editor"}>Back 👈</Button>
         </Link>
       </Navbar>
       <div className={styles.CardDetails__CardEditor}>

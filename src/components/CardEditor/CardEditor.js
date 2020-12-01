@@ -39,15 +39,15 @@ export default function CardEditor({ card }) {
 
   return (
     <div className={styles.CardEditor}>
+      <h4>
+        {cardName} count: {card.count.total}
+      </h4>
       <img src={cardImageUrl} className={styles.CardEditor__Image} />
-      <div className={styles.CardEditor__Form}>
-        <Input value={cardName} onChange={handleEditCardName} />
-        <Input value={cardImageUrl} onChange={handleEditCardUrl} />
-        <Button onClick={handleSaveImage}>
-          <span>Save ✅</span>
-        </Button>
-        {(saved && <span>Saved successfully! 😊</span>) || ""}
-      </div>
+      <Input value={cardName} onChange={handleEditCardName} />
+      <Input value={cardImageUrl} onChange={handleEditCardUrl} />
+      <Button onClick={handleSaveImage} tracking-id={`save-card-${card._id}`}>
+        <span>{(saved && "Saved successfully! 😊") || "Save ✅"}</span>
+      </Button>
     </div>
   );
 }

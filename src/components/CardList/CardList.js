@@ -40,9 +40,14 @@ export default function CardList() {
           {filteredItems[index].name}
           <div className={styles.ItemList__Element__Actions}>
             <Link to={`/card-details/${filteredItems[index]._id}`}>
-              <Button>🖋</Button>
+              <Button tracking-id={`edit-card-${filteredItems[index]._id}`}>
+                🖋
+              </Button>
             </Link>
-            <Button onClick={() => handleDeleteCard(filteredItems[index]._id)}>
+            <Button
+              tracking-id={`delete-card-${filteredItems[index]._id}`}
+              onClick={() => handleDeleteCard(filteredItems[index]._id)}
+            >
               ❌
             </Button>
           </div>
