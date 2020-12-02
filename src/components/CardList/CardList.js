@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React from "react";
 import { Link } from "react-router-dom";
 import styles from "./CardList.module.css";
 import AutoSizer from "react-virtualized-auto-sizer";

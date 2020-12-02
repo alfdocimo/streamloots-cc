@@ -42,7 +42,11 @@ export default function CardEditor({ card }) {
       <h4>
         {cardName} count: {card.count.total}
       </h4>
-      <img src={cardImageUrl} className={styles.CardEditor__Image} />
+      <img
+        alt={cardName}
+        src={cardImageUrl}
+        className={styles.CardEditor__Image}
+      />
       <Input value={cardName} onChange={handleEditCardName} />
       <Input value={cardImageUrl} onChange={handleEditCardUrl} />
       <Button onClick={handleSaveImage} tracking-id={`save-card-${card._id}`}>

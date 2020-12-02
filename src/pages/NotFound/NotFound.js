@@ -17,7 +17,7 @@ export default function CardDetails() {
         </Link>
       </Navbar>
       <div className={styles.NotFound__Container}>
-        <img src="https://http.cat/404" />
+        <img alt="Not found cat" src="https://http.cat/404" />
       </div>
     </div>
   );
